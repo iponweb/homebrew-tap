@@ -5,12 +5,12 @@
 class Metachart < Formula
   desc ""
   homepage "https://github.com/iponweb/metachart"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.0/metachart_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "df2907f8480e90aca2b9479487831884a7f2c01dd01a82e957f9d7cbd9b3a146"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.1/metachart_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "4d769ed8779be613a6116c51a80712cb169bd7b3a52797796a8a709d60842a81"
 
       def install
         bin.install "metachart"
@@ -23,8 +23,8 @@ class Metachart < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.0/metachart_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "06515eddf0fb81f2d6d21abab23cf4f232bc4ce5c132c67c03017f6b702acafe"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.1/metachart_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "557e0ae5407a2c1d862fcefabe56417bb32f9ea50b5551b38102c4d2ba0c8e02"
 
       def install
         bin.install "metachart"
@@ -40,8 +40,8 @@ class Metachart < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.0/metachart_0.1.0_Linux_arm64.tar.gz"
-      sha256 "3d8ab95d92224deba2e02f59f7f56344df2e6262d940ada0fb6d96146a7fb288"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.1/metachart_0.1.1_Linux_arm64.tar.gz"
+      sha256 "96c27a87125f5741c03ac61e1248f847d6564aee15b19837a71e3578b75f80be"
 
       def install
         bin.install "metachart"
@@ -54,8 +54,8 @@ class Metachart < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.0/metachart_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "76aa89e19e958f0e7a198d376fc3503a41d9ae1e03be949f01b969e24abe3452"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.1/metachart_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "dc6405395493e714f92f688317cf27e13741c0bb71f1479d368dc30df88b0b37"
 
       def install
         bin.install "metachart"
