@@ -5,12 +5,12 @@
 class Metachart < Formula
   desc ""
   homepage "https://github.com/iponweb/metachart"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.3/metachart_Darwin_x86_64.tar.gz"
-      sha256 "863216ed575f60822da4393b4c583faaf4acfdd7e8b9bff5f094c31f64824f1e"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.4/metachart_Darwin_x86_64.tar.gz"
+      sha256 "dee5acd6499b3bdba183c0fb339c8ada7ed9dc8a1f01c6ab41d8a638794c7a6a"
 
       def install
         bin.install "metachart"
@@ -23,8 +23,8 @@ class Metachart < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.3/metachart_Darwin_arm64.tar.gz"
-      sha256 "95cce1b33405a0c6932b6d80a05037faceb60afb0dc3ebef3de3c9e3a3f0dd24"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.4/metachart_Darwin_arm64.tar.gz"
+      sha256 "e42b1c1a0cfaab1df58e9665aeec9ee16e1f9f91b99f4d6b2916be114d4b3d0f"
 
       def install
         bin.install "metachart"
@@ -40,8 +40,8 @@ class Metachart < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.3/metachart_Linux_x86_64.tar.gz"
-      sha256 "6df30d60b78a7d3fe371555e9db622963a64b20c44ac75c51d3e2acee1eb9330"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.4/metachart_Linux_x86_64.tar.gz"
+      sha256 "9b892a984862bfacd0f02dc1bae5165c09e54bdc740431665ae6d75701aa0306"
       def install
         bin.install "metachart"
         # Install bash completion
@@ -53,8 +53,8 @@ class Metachart < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/iponweb/metachart/releases/download/v0.1.3/metachart_Linux_arm64.tar.gz"
-      sha256 "85623f0bc18b22c2abb330f39c18b0ecbf6a8cf3e0359e6c7fc17d168753740c"
+      url "https://github.com/iponweb/metachart/releases/download/v0.1.4/metachart_Linux_arm64.tar.gz"
+      sha256 "57fda37829ce20858987f99ae83eef369f458afd7989acc9f33f80f908b76240"
       def install
         bin.install "metachart"
         # Install bash completion
