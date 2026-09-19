@@ -5,14 +5,14 @@
 class Metachart < Formula
   desc ""
   homepage "https://github.com/iponweb/metachart"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iponweb/metachart/releases/download/v0.2.0/metachart_Darwin_x86_64.tar.gz"
-      sha256 "e942c78f1249ef5f4e238d0796011688b1d4b213cab9ea321d7da6e739d3334f"
+      url "https://github.com/iponweb/metachart/releases/download/v0.3.0/metachart_Darwin_x86_64.tar.gz"
+      sha256 "08111216291794cd7efa15f130254c41103ea2a392a8e259228f77ead6310bd7"
 
-      def install
+      define_method(:install) do
         bin.install "metachart"
         # Install bash completion
         output = Utils.safe_popen_read(bin/"metachart", "completion", "bash")
@@ -23,10 +23,10 @@ class Metachart < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iponweb/metachart/releases/download/v0.2.0/metachart_Darwin_arm64.tar.gz"
-      sha256 "9c3ac25449f20fb98280bcb39a61a5a7558aa80edb7906c52ee2286b2329f2b3"
+      url "https://github.com/iponweb/metachart/releases/download/v0.3.0/metachart_Darwin_arm64.tar.gz"
+      sha256 "7ff74c2ae9cd27010773889723735293147ef3447b7c56a93f9cd97d01d4b7ef"
 
-      def install
+      define_method(:install) do
         bin.install "metachart"
         # Install bash completion
         output = Utils.safe_popen_read(bin/"metachart", "completion", "bash")
@@ -39,10 +39,10 @@ class Metachart < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/iponweb/metachart/releases/download/v0.2.0/metachart_Linux_x86_64.tar.gz"
-      sha256 "1dec5786fc56366194b6f8147a6fb6aa992055a9e8d3c1b92e0aab3180aa2e7a"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/iponweb/metachart/releases/download/v0.3.0/metachart_Linux_x86_64.tar.gz"
+      sha256 "1514b3187f655763d250dd9ce8adb49ad6e55245f68a1e76635d13277b51b2e7"
+      define_method(:install) do
         bin.install "metachart"
         # Install bash completion
         output = Utils.safe_popen_read(bin/"metachart", "completion", "bash")
@@ -52,10 +52,10 @@ class Metachart < Formula
         (zsh_completion/"_metachart").write output
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/iponweb/metachart/releases/download/v0.2.0/metachart_Linux_arm64.tar.gz"
-      sha256 "e3d74853de23610684b3fdfd957c83fd2a20062528ef6c2128584b6e6d4ac316"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/iponweb/metachart/releases/download/v0.3.0/metachart_Linux_arm64.tar.gz"
+      sha256 "a23cfa65a51c21613b020f467a168423dceb22d4b3f35e6a3d3002dbc20a3663"
+      define_method(:install) do
         bin.install "metachart"
         # Install bash completion
         output = Utils.safe_popen_read(bin/"metachart", "completion", "bash")
